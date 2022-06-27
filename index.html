@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://education.nationalgeographic.org/resource/belly-button-biodiversity">National Geographic Info</a>
+      </div>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3492386/">"A Jungle in There" NCBI Article</a>
+      </div>
+    </div>
+  </nav>
+
+</head>
+<body>
+    <style type="text/css">
+        .jumbotron {background-image: url("https://c8.alamy.com/comp/CNF30Y/laboratory-biological-chemical-analysis-of-bacterial-cultures-of-bacteria-CNF30Y.jpg")}
+        .jumbotron h1 {font-weight: bold;}  
+        .blurr-shadow{
+	        text-shadow:2px 2px 5px #070707;
+            color:rgb(218, 255, 85);}
+        body {background-color: #fae2f2;
+        }
+</style>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+                <h1>Belly Button Biodiversity Dashboard</h1>
+                <p class="blurr-shadow">Use the interactive charts below to explore the dataset</p>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="background-info">
+            <p>Improbable Beef is looking to improve the taste of their product by finding bacteria that will take the flavor of the artificial meat to the next level! 
+                Volunteers who were interested in providing their own bacteria were asked to swab their belly buttons, provide demographic data, the type of belly button 
+                (i.e., innie "I" or outie "O"), and the frequency of washing their belly button per week. 
+             </p>
+            </div>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="well">
+                <h5>Test Subject ID No.:</h5>
+                <select id="selDataset" onchange="optionChanged(this.value)"></select>
+            </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Demographic Info</h3>
+            </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+            <div id="bar"></div>
+            <div id="bar-paragraph">
+            <p>The bar chart above highlights the top 10 bacterial cultures collected from volunteers’ belly buttons. 
+                Each bacterial strain was assigned an OTU number for identification. </p>
+         </div>
+      </div>
+      <div class="col-md-5">
+         <div id="gauge"></div>
+            <div id="gauge-paragraph">
+            <p>This gauge shows how many times our volunteers washed their belly buttons each week. 
+                As the gauge displays, the volunteers for this study claim to wash their belly buttons about 2 times per week.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="bubble"></div>
+            <div id="bubble-paragraph">
+                <p>This bubble chart visualizes the amount of each bacterial culture found in the samples. 
+                    If you hover over each bubble, you’ll find the OUT IDs and the names of the bacteria associated with the ID numbers.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+</html>

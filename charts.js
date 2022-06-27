@@ -117,7 +117,7 @@ function buildCharts(sample) {
       marker: {
         size: sample_values,
         color: otu_ids,
-        colorscale: 'Earth'
+        colorscale: 'Picnic'
       }
 
     }];
@@ -156,11 +156,11 @@ function buildCharts(sample) {
           axis: { range: [null, 10] },
           bar: { color: "black" },
           steps: [
-            { range: [0, 2], color: "red" },
-            { range: [2, 4], color: "orange" },
-            { range: [4, 6], color: "yellow" },
-            { range: [6, 8], color: "chartreuse" },
-            { range: [8, 10], color: "green" }
+            { range: [0, 2], color: "sienna" },
+            { range: [2, 4], color: "moccasin" },
+            { range: [4, 6], color: "palevioletred" },
+            { range: [6, 8], color: "thistle" },
+            { range: [8, 10], color: "darkturquoise" }
           ]
         }
       }];
